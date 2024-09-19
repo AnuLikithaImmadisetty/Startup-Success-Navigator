@@ -35,7 +35,7 @@ def load_data():
     return pd.read_csv('startup_data.csv')
 
 def preprocess_data(df):
-    df = df.drop(['Unnamed: 0', 'Unnamed: 6', 'latitude', 'longitude', 'zip_code', 'id', 'name', 'object_id'], axis=1)
+    df = df.drop(['Unnamed: 0', 'Unnamed: 6', 'latitude', 'longitude', 'zip_code', 'id', 'name', 'object_id'], axis=1, errors='ignore')
     df['State'] = df['state_code'].map(lambda x: x if x in STATE_OPTIONS[:5] else 'other')
     df['category'] = df['category_code'].map(lambda x: x if x in CATEGORY_OPTIONS[:-1] else 'other')
     df['City'] = df['city'].map(lambda x: x if x in CITY_OPTIONS[:-1] else 'other')
