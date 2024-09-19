@@ -35,12 +35,9 @@ Here's an overview of the project's structure
 │       └── Startup Success Navigator.ipynb
 │ 
 └── Streamlit/ 
-   │     ├── streamlit_app.py
-   │     ├── startup_data.csv
-   │     └── requirements.txt
-   └──.devcontainer
-              └── devcontainer.json
-   
+       ├── streamlit_app.py
+       ├── startup_data.csv
+       └── requirements.txt   
 ```
 
 ## Dataset and Description 
