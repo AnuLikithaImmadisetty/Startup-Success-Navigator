@@ -34,17 +34,21 @@ def load_data():
     return pd.read_csv('Streamlit/startup_data.csv')
 
 def preprocess_data(df):
-    df = df.drop(['Unnamed: 0', 'Unnamed: 6', 'latitude', 'longitude', 'zip_code', 'id', 'name', 'object_id'], axis=1)
+    st.write("Columns in DataFrame:", df.columns.tolist())  # Inspect columns
+    columns_to_drop = ['Unnamed: 0', 'Unnamed: 6', 'latitude', 'longitude', 'zip_code', 'id', 'name', 'object_id']
+    existing_columns_to_drop = [col for col in columns_to_drop if col in df.columns]
+    
+    df = df.drop(existing_columns_to_drop, axis=1)
     df['State'] = df['state_code'].map(lambda x: x if x in STATE_OPTIONS[:5] else 'other')
     df['category'] = df['category_code'].map(lambda x: x if x in CATEGORY_OPTIONS[:-1] else 'other')
     df['City'] = df['city'].map(lambda x: x if x in CITY_OPTIONS[:-1] else 'other')
     df = df.drop(['state_code', 'state_code.1', 'is_CA', 'is_NY', 'is_MA', 'is_TX', 'is_otherstate',
                   'city', 'labels', 'category_code', 'is_software', 'is_web', 'is_mobile', 'is_enterprise',
                   'is_advertising', 'is_gamesvideo', 'is_ecommerce', 'is_biotech', 'is_consulting',
-                  'is_othercategory'], axis=1)
+                  'is_othercategory'], axis=1, errors='ignore')
     df['founded_year'] = pd.to_datetime(df['founded_at']).dt.year
     df = df[~((df['closed_at'].notna()) & (df['status'] == 'acquired'))]
-    df = df.drop(['founded_at', 'closed_at', 'first_funding_at', 'last_funding_at'], axis=1)
+    df = df.drop(['founded_at', 'closed_at', 'first_funding_at', 'last_funding_at'], axis=1, errors='ignore')
     
     # Preprocessing pipeline
     df['has_RoundABCD'] = ((df[['has_roundA', 'has_roundB', 'has_roundC', 'has_roundD']] == 1).any(axis=1)).astype(int)
@@ -56,6 +60,13 @@ def preprocess_data(df):
     df['status'] = (df['status'] == 'acquired').astype(int)
     
     return df.drop('status', axis=1), df['status']
+
+def preprocess_user_input(df):
+    df['State'] = df['State'].map(lambda x: x if x in STATE_OPTIONS[:5] else 'other')
+    df['category'] = df['category'].map(lambda x: x if x in CATEGORY_OPTIONS[:-1] else 'other')
+    df['City'] = df['City'].map(lambda x: x if x in CITY_OPTIONS[:-1] else 'other')
+    df = pd.get_dummies(df, columns=['State', 'category', 'City'])
+    return df
 
 def train_model(X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
@@ -75,22 +86,22 @@ def main():
     # Sidebar Navigation
     if selected == 'Home':
         st.title('Welcome to the Startup Success Navigator🚀')
-        st.markdown("""
+        st.markdown(""" 
         ## Predicting Startup Success with AI
-        
+
         **Startup Success Navigator** is designed to help you predict the likelihood of a startup being acquired or closed based on historical data. 
         Navigate to the **Startup Success Navigator** section to input startup data and get predictions.
-        
+
         ### Features:
         - Predict the success of startups based on factors like funding rounds, relationships, industries, and more.
         - Leverages advanced machine learning models for accurate predictions.
         - Pre-built with a rich dataset of real-world startups.
-        
+
         Use the navigation on the left to explore the options.
         """)
 
     elif selected == 'Startup Success Navigator':
-        st.title('Check out whether the startup is success or not?')
+        st.title('Startup Success Navigator')
         
         # Columns for user input
         col1, col2, col3 = st.columns(3)
@@ -117,7 +128,7 @@ def main():
             })
             
             # Preprocessing pipeline for input data
-            model_input = preprocess_data(user_data)[0]
+            model_input = preprocess_user_input(user_data)
             model_input_scaled = scaler.transform(model_input)
             
             # Perform prediction
