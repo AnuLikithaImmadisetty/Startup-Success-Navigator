@@ -89,8 +89,8 @@ def main():
         Use the navigation on the left to explore the options.
         """)
 
-    elif selected == 'Startup Success Prediction':
-        st.title('Startup Success Prediction')
+    elif selected == 'Startup Success Navigator':
+        st.title(' ')
         
         # Columns for user input
         col1, col2, col3 = st.columns(3)
