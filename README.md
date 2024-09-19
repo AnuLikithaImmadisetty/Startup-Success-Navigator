@@ -5,7 +5,7 @@ Welcome to the "Startup Success Navigator" repository! This repository highlight
  - [Overview](#overview)
  - [Project Structure](#project-structure)
  - [Dataset and Description](#dataset-and-description)
- - [Business Key Performance Indicators](business-key-performance-indicators)
+ - [Business Key Performance Indicators](#business-key-performance-indicators)
  - [Features](#features)
  - [Tools and Technologies](#tools-and-technologies)
  - [Results](#results)
