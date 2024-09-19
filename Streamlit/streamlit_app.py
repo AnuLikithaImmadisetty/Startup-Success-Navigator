@@ -30,7 +30,7 @@ with st.sidebar:
 # Load and preprocess data
 @st.cache_data
 def load_data():
-    return pd.read_csv('startup_data.csv')
+    return pd.read_csv('Streamlit/startup_data.csv')
 
 def preprocess_data(df):
     df = df.drop(['Unnamed: 0', 'Unnamed: 6', 'latitude', 'longitude', 'zip_code', 'id', 'name', 'object_id'], axis=1)
