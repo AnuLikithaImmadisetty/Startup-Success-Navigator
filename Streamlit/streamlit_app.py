@@ -21,7 +21,7 @@ st.set_page_config(
 
 # Sidebar for navigation
 with st.sidebar:
-    options = ['Home', 'Startup Success Prediction', 'About the Model']
+    options = ['Home', 'Startup Success Navigator', 'About the Model']
     selected = option_menu('Startup Success Navigator🚀',
                            options,
                            menu_icon='graph-up-arrow',
@@ -79,7 +79,7 @@ def main():
         ## Predicting Startup Success with AI
         
         **Startup Success Navigator** is designed to help you predict the likelihood of a startup being acquired or closed based on historical data. 
-        Navigate to the **Startup Success Prediction** section to input startup data and get predictions.
+        Navigate to the **Startup Success Navigator** section to input startup data and get predictions.
         
         ### Features:
         - Predict the success of startups based on factors like funding rounds, relationships, industries, and more.
@@ -90,7 +90,7 @@ def main():
         """)
 
     elif selected == 'Startup Success Navigator':
-        st.title(' ')
+        st.title('Check out whether the startup is success or not?')
         
         # Columns for user input
         col1, col2, col3 = st.columns(3)
