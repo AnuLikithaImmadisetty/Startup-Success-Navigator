@@ -5,7 +5,7 @@ Welcome to the "Startup Success Navigator" repository! This repository highlight
  - [Overview](#overview)
  - [Project Structure](#project-structure)
  - [Dataset and Description](#dataset-and-description)
- - [Business Key Performance Indicators (KPIs)](business-key-performance-indicators(kpis))
+ - [Business Key Performance Indicators](business-key-performance-indicators)
  - [Features](#features)
  - [Tools and Technologies](#tools-and-technologies)
  - [Results](#results)
@@ -13,7 +13,7 @@ Welcome to the "Startup Success Navigator" repository! This repository highlight
  - [Getting Started](#getting-started)
  - [Usage](#usage)
  - [Contributing](#contributing)
- - [License](#⚖license)
+ - [License](#license)
  - [Author](#author)
 
 ## Overview 
@@ -98,7 +98,7 @@ The [Dataset](https://github.com/AnuLikithaImmadisetty/Startup-Success-Navigator
 - **is_top500**: A binary indicator for whether the startup is ranked in the top 500 startups (1 for Yes, 0 for No).
 - **status**: The current status of the startup (e.g., acquired, closed).
 
-## Business Key Performance Indicators (KPIs)
+## Business Key Performance Indicators
 1. **Total Funding Raised**: The aggregate amount of funding secured by startups across all funding rounds, expressed in USD.  
 2. **Success Rate**: The proportion of startups that are currently operational, have been acquired, or have ceased operations, providing insights into overall startup success.  
 3. **Venture Capital Acquisition Rate**: The percentage of startups that have successfully obtained venture capital (VC) funding.  
