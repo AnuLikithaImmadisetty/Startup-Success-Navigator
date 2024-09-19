@@ -1,5 +1,5 @@
 # Startup Success Navigator🚀
-Welcome to the "Startup Success Navigator" repository! This repository highlights the performance of our advanced machine learning models in predicting startup success. Additionally, I have deployed a Streamlit application that you can  [Explore here]() to see in action.
+Welcome to the "Startup Success Navigator" repository! This repository highlights the performance of our advanced machine learning models in predicting startup success. Additionally, I have deployed a Streamlit application that you can [Explore here](https://startup-success-navigator.streamlit.app/) to see in action.
 
 ## Table of Contents 
  - [Overview](#overview)
@@ -34,12 +34,12 @@ Here's an overview of the project's structure
 ├── Notebooks/  
 │       └── Startup Success Navigator.ipynb
 │ 
-└── StreamlitApplication/ 
-        ├──.devcontainer
-        │      └──devcontainer.json
-        ├── streamlit_app.py
-        ├── startup_data.csv
-        └── requirements.txt
+└── Streamlit/ 
+   │     ├── streamlit_app.py
+   │     ├── startup_data.csv
+   │     └── requirements.txt
+   └──.devcontainer
+              └── devcontainer.json
    
 ```
 
