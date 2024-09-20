@@ -14,8 +14,7 @@ Welcome to the "Startup Success Navigator" repository! This repository highlight
  - [Usage](#usage)
  - [Contributing](#contributing)
  - [License](#license)
- - [Author](#author)
-
+   
 ## Overview 
 In the rapidly changing startup landscape, having timely and precise predictions is essential. The Startup Success Navigator🚀 harnesses advanced machine learning techniques to anticipate startup success. This project provides real-time predictions and insightful visualizations to support investment decisions. Its goal is to analyze startup characteristics, pinpoint critical factors affecting success, and create a predictive model to forecast which startups are likely to succeed.
 
@@ -137,9 +136,9 @@ This project leverages a variety of machine learning models to identify the succ
 
 ### Scaling Methods:
 
-- StandardScaler: Scales features to have a mean of 0 and a standard deviation of 1 for normalization. 📉
-- MinMaxScaler: Scales features to a range between 0 and 1 for feature scaling. 📊
-- RobustScaler: Scales features using statistics that are robust to outliers, such as the median and interquartile range. 🛠️
+- **StandardScaler:** Scales features to have a mean of 0 and a standard deviation of 1 for normalization. 📉
+- **MinMaxScaler:** Scales features to a range between 0 and 1 for feature scaling. 📊
+- **RobustScaler:** Scales features using statistics that are robust to outliers, such as the median and interquartile range. 🛠️
 
 Refer to the [Notebooks](https://github.com/AnuLikithaImmadisetty/Startup-Success-Navigator/tree/main/Notebooks) here!
 
@@ -175,11 +174,6 @@ Contributions are welcome to this project. To contribute, please follow these st
 
 ## License 
 This project is licensed under the MIT License. Refer to the LICENSE file included in the repository for details.
-
-
-## Author
-Developed by: [@AnuLikithaImmadisetty](https://github.com/AnuLikithaImmadisetty)  
-
 
 
 
