@@ -149,7 +149,7 @@ Refer to the [Results](https://linktoresults) here!
 Refer to the [Documentation](https://linktodocumentation) here!
 
 ## Getting Started 
-To get started with the Multi Label Abusive Comments Identification project, follow these steps:
+To get started with the Startup Success Navigator project, follow these steps:
 1. **Clone the Repository:** Clone the repository to your local machine using Git: (`git clone https://github.com/AnuLikithaImmadisetty/Startup-Success-Navigator.git`)
 2. **Navigate to the Project Directory:** Change to the project directory: (`cd Startup-Success-Navigator`)
 3. **Install Dependencies:** Install the required dependencies using pip: (`pip install -r requirements.txt`)
