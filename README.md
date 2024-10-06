@@ -8,8 +8,6 @@ Welcome to the "Startup Success Navigator" repository! This repository highlight
  - [Business Key Performance Indicators](#business-key-performance-indicators)
  - [Features](#features)
  - [Tools and Technologies](#tools-and-technologies)
- - [Results](#results)
- - [Documentation](#documentation)
  - [Getting Started](#getting-started)
  - [Usage](#usage)
  - [Contributing](#contributing)
@@ -25,10 +23,6 @@ Here's an overview of the project's structure
 ├── Datasets/ 
 │       ├── origional_startup_data.csv
 │       └── startup_data.csv
-│ 
-├── Documentations/ 
-│       ├── Documentation.pdf
-│       └── Metrics.pdf
 │ 
 ├── Notebooks/  
 │       └── Startup Success Navigator.ipynb
@@ -141,12 +135,6 @@ This project leverages a variety of machine learning models to identify the succ
 - **RobustScaler:** Scales features using statistics that are robust to outliers, such as the median and interquartile range. 🛠️
 
 Refer to the [Notebooks](https://github.com/AnuLikithaImmadisetty/Startup-Success-Navigator/tree/main/Notebooks) here!
-
-## Results
-Refer to the [Results](https://linktoresults) here!
-
-## Documentation 
-Refer to the [Documentation](https://linktodocumentation) here!
 
 ## Getting Started 
 To get started with the Startup Success Navigator project, follow these steps:
